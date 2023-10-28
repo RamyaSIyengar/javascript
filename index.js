@@ -24,7 +24,7 @@ var getName2 = function(){
 }
 
 let b=7
-console.log(typeof(b)
+console.log(typeof(b))
 
 
 
