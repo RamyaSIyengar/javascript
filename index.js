@@ -67,4 +67,16 @@ const numbers = [1,2,3,4,5];
 numbers.push(6); // you can manipulate values in the array obj 
 console.log(numbers);
 
+/*
+Datatypes in JS 
+2 types of datatypes 
+1. primitive datatypes -stores directly in the location, the variable access stored in the stack
 
+String,Number,Boolean,Null,undefined,Symbol
+
+Reference data types -accessed by reference,stored in heap and points to the location in memory
+Arrays, Object Literals, Functions
+*/
+
+const hisName = 'Rajesh';
+console.log(typeof hisName);
