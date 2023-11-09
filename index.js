@@ -148,20 +148,137 @@ console.log(sum);
 console.log(typeof sum)
 
 //template literals(es6)
-let html;
-const firstName='ramya';
-const lName = 'iyengar';
+//didnt work
+// let html;
+// const firstName='ramya';
+// const lName = 'iyengar';
+// html = `
+// <ul>
+//     <li>Firstname:${firstName}</li>
+//     <li>lastname:${lName}</li>
+// </ul>
+// `
+// document.body.innerHTML=html;
 
 
+//object literals
 
-html = `
-<ul>
-    <li>Firstname:${firstName}</li>
-    <li>lastname:${lName}</li>
+const ppl = {
+    domain: 'IT',
+    company:'techm',
+    age:25,
+    challenges:['poverty','healthissues','insecurities','overthinker'],//array
+    strength:{
+        overall:'good person',
+        talent:'artist',
+    },//object
+    
+    getBirthYear:function (){
+        return 2023-this.age;
+    },
 
-</ul>
-`
-document.body.innerHTML=html;
+};
+let val;
+val =ppl
+
+//console.log(ppl.company,ppl.domain)
+console.log(val.company,val.domain,val.challenges[1])
+console.log(val.strength.talent)
+console.log(val.getBirthYear())
+
+//array of object
+
+Student = [
+    {
+      rollNum:57,
+      stuname:'Raju',
+    },
+    {
+      rollNum:58,
+      stuname:'Ramya',
+    },
+    {
+    rollNum:59,
+    stuname:'Ram',
+    }
+
+]
+console.log(Student[0])
+for(let i=0;i<Student.length;i++){
+    console.log(Student[i].rollNum)
+}
+
+//functions
+
+//Function Statement  
+// ai(); - it works for hoisting
+function ai(){
+   console.log('Function Statement');
+}
+ai();
+
+
+//Function Expression - function acts like a value
+// b(); index.js:221 Uncaught TypeError: b is not a function, hoisting doesnt work
+var b = function() {
+      console.log('Function Expression')
+}
+
+b();
+//diff between statement nd expression -hoisting
+
+
+//Anonymous Function - used as values like above to assign it a variable, cant use alone gives error 
+// function () {
+
+// }
+// SyntaxError: Function statements require a function name
+
+
+//Named Function Expression
+
+var c = function d(){
+    console.log('Named Function Expression');
+}
+c();
+// d(); Uncaught ReferenceError: d is not defined
+
+
+//diff between parameters and arguments
+
+// var e = function (parameter1, parameter2){
+//     console.log("called")
+// }
+// e(argument1,argument2)
+
+//first class functions  
+//- passing an another function inside a function
+var e = function (parameter1){
+        console.log(parameter1)
+    }
+    e(function(){
+
+    });
+ 
+    // or
+
+    var e = function (parameter1){
+        console.log(parameter1)
+    }
+
+    function xyz(){
+
+    }
+
+    e(xyz);
+// we can pass a function inside afunction aswell as we can return a function from a function
+
+var f = function (param1){
+    return function(){
+
+    }
+}
+console.log(f());
 
 
 
