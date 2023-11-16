@@ -48,3 +48,37 @@ attachEventListeners();
 
 //Garbage Collection and remove eventListeners
 // eventlisterners take memry - which doesnt freeup by itself
+
+// javascript  Runtme environment
+// javascript engine, api, 
+// learn abt ECMASCript, spydermonkey
+
+// JS Engine
+/* 3 major steps 
+ Code -> parsing -> complilation -> execution
+
+ 1. parsing
+ during parsing phase, the code is broken into TOKENS 
+ let a= 7 => let is one token, a is one token  
+ syntax parser => job of this sp is to convert the code into AST - Abstract syntax tree
+ AST is passed to compilation phase
+astexplorer.net to see ast for a js code
+
+ 2. compilation 
+ JIT compilation - JUst in time compilation
+ diff between interpreter and compiler
+ interpreter - code is executed line by line. code is fast
+ compiler -code is compiled frst even before execution and new code is formed which is a optimized version of the code
+more efficiency in compiler
+js can be both 
+
+AOT - ahead of time compiler
+finally the byte code goes to execution phase
+
+3. execution -
+memry heap and call stack
+memry heap  - is where all the memory is placed, where all the variables and function are placed memory
+
+garbage collector - uses Mark and sweep algorithm
+google inlineing, copy elision, inline caching, Mark and sweep algorithm
+*/
