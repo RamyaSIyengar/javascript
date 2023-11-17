@@ -104,3 +104,14 @@ while (endDate < startDate+10000){
 }
 
 console.log("while expires");
+
+
+/*
+console.log("Start");
+function cb(){
+    console.log("prints at last");   
+}
+setTimeout(cb,0);
+console.log("End");
+*/
+
