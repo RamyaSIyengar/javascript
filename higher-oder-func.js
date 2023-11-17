@@ -121,4 +121,72 @@ const outpt = arr.filter((x)=>{return x>4});
 console.log(outpt);
 
 //reduce
+//const arr = [5,1,3,2,6];
 
+function findSum(arr){
+    let sum=0;
+    for (let i=0;i<arr.length;i++){
+        sum = sum+arr[i];
+    }
+    return sum;
+}
+console.log(findSum(arr));
+
+const outputt = arr.reduce(function(accumulator,current){
+    //current = arr[i], accumulator=sum
+    accumulator = accumulator+current;
+    return accumulator;
+}, 0)
+
+console.log(outputt);
+
+//const arr = [5,1,3,2,6];
+
+function findMax(arr){
+    let Max=0;
+    for (let i=0;i<arr.length;i++){
+        if(arr[i]>Max)
+        Max = arr[i];
+    }
+    return Max;
+}
+console.log(findMax(arr));
+
+const outputtt = arr.reduce(function(acc, curr){
+    //current = arr[i], accumulator=max
+   if(curr>acc)
+   acc = curr
+   return acc
+}, 0);
+
+console.log(outputtt);
+
+//more examples
+const users =[
+    {firstName:"Ram",lastName: "Raj", age: 25},
+    {firstName:"Rash",lastName: "Ash", age: 27},
+    {firstName:"Ragh",lastName: "av", age: 35},
+    {firstName:"Remo",lastName: "dzuza", age: 25},
+];
+
+//{25:2,27:1,29:1}
+
+const output1 = users.reduce(function(acc, curr){
+    //curr =>{firstName:,lastName: , age: }
+    if(acc[curr.age]){
+        acc[curr.age]=++acc[curr.age];
+    }
+    else{
+       acc[curr.age]=1  
+    }
+    return acc;
+},{})
+
+console.log(output1);
+
+// first name of ppl whose age is less than 30
+
+const output2 = users.filter((x) => x.age<30).map((x)=>x.firstName);
+console.log(output2)
+
+//users.filter((x) => x.age<30 gave array but to get the frst name 
