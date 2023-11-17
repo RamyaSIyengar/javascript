@@ -81,4 +81,26 @@ memry heap  - is where all the memory is placed, where all the variables and fun
 
 garbage collector - uses Mark and sweep algorithm
 google inlineing, copy elision, inline caching, Mark and sweep algorithm
+
+V8 JS Engine - orinoco - oilpay
 */
+
+// Trust issues with SetTimeout
+
+console.log("start");
+
+setTimeout(function cb(){
+    console.log("Callback");
+}, 5000);
+
+console.log("End");
+
+//millipn lines
+
+let startDate = new Date().getTime();
+let endDate = startDate;
+while (endDate < startDate+10000){
+    endDate = new Date().getTime();
+}
+
+console.log("while expires");
